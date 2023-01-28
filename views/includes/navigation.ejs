@@ -1,0 +1,123 @@
+<header>
+    <nav class="desktop-nav">
+        <a  href="/"  class="logo">
+            aero<span>smart</span>
+        </a>
+
+        <div class="search">
+            <input type="text" placeholder="search on Aerosmart">
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+        </div>
+
+        <div class="right">
+            <div class="content">
+               <a class="<%= path === '/products' ? 'active' : '' %>"  href="/cart" ><i class="fa-solid fa-user"></i>
+                    <p>sign In</p></a>
+            </div>
+            <div class="content">  
+             <a class="<%= path === '/cart' ? 'active' : '' %>"  href="/cart" >  <i class="fa-solid fa-cart-shopping"></i>
+                <p>cart</p></a>
+            </div> 
+            <div class="content">
+               <a class="<%= path === '/orders' ? 'active' : '' %>"  href="/orders" ><i class="fa-solid fa-clipboard-list"></i>
+                    <p>orders</p></a>
+            </div>
+            <div class="content">
+               <a class="<%= path === '/admin/add-product' ? 'active' : '' %>"  href="/admin/add-product" ><i class="fa-solid fa-clipboard-list"></i>
+                    <p>add <br> product</p></a>
+            </div>
+            <div class="content">
+               <a class="<%= path === '/admin/add-product' ? 'active' : '' %>"  href="/admin/products" ><i class="fa-solid fa-clipboard-list"></i>
+                    <p>admin <br> products</p></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- mobile nav -->
+    <div class="mobile-nav-container">
+    <nav class="mobile-nav">
+    <div class="logo-container">
+        <i class="fa-solid fa-bars menu"></i>
+        <a  href="/"  class="logo">
+            aero<span>smart</span>
+        </a>
+    </div>
+
+        <div class="right">
+            <!-- <div class="content">
+               <a class="<%= path === '/orders' ? 'active' : '' %>"  href="#" ><i class="fa-solid fa-magnifying-glass"></i></i>
+                    </a>
+            </div> -->
+            <div class="content">
+               <a class="<%= path === '/products' ? 'active' : '' %>"  href="/cart" ><i class="fa-solid fa-user"></i>
+                  </a>
+            </div>
+            <div class="content">  
+             <a class="<%= path === '/cart' ? 'active' : '' %>"  href="/cart" >  <i class="fa-solid fa-cart-shopping"></i>
+               </a>
+            </div> 
+        </div>
+
+    </nav>
+    <div class="mobile-search">
+        <input type="text" placeholder="search on Aerosmart">
+        <p><i class="fa-solid fa-magnifying-glass"></i></p>
+    </div>      
+</div>
+
+</header>
+
+
+<!-- <header class="main-header">
+    <button id="side-menu-toggle">Menu</button>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item">
+                <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Products</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Cart</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product
+                </a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header> -->
+
+<!-- <nav class="mobile-nav">
+        <ul class="mobile-nav__item-list">
+                <li class="mobile-nav__item">
+                    <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Products</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Cart</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product
+                    </a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products
+                    </a>
+                </li>
+            </ul>
+</nav> -->

@@ -1,0 +1,68 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <div class="banner-container ">
+            <!-- Slider main container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide_1"><img src="/Banners/construction.jpg" alt=""></div>
+                  <div class="swiper-slide slide_2"><img src="/Banners/wood.jpg" alt=""></div>
+                  <div class="swiper-slide slide_3"><img src="/Banners/gravel.jpg" alt=""></div>
+                  <div class="swiper-slide slide_4"><img src="/Banners/white-gravel.jpg" alt=""></div>
+                  <div class="swiper-slide slide_5"><img src="/Banners/bricks.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>  
+        <div class="product-grid">
+        <% if (hasProducts) { %>
+            <div class="product-container ">
+                <% for (let product of prods) { %>
+                    <div class="product-card">
+                            <a href="/products/<%= product.id %>" >
+                            <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                        </a>
+                           <div class="card-items">
+                            <p class="title"><%= product.title %></p>
+                            <p class="description" id="product-description"><%= product.description %></p>
+                            <p class="price">N<%= product.price %></p>
+                            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+                            <!-- <button class="btn">add to cart</button> -->
+                           </div>
+                        </div>
+                        <!-- <header class="card__header">
+                            <h1 class="product__title"><%= product.title %></h1>
+                        </header>
+                        <div class="card__image">
+                            <img src="<%= product.imageUrl %>"
+                                alt="<%= product.title %>">
+                        </div>
+                        <div class="card__content">
+                            <h2 class="product__price">$<%= product.price %></h2>
+                            <p class="product__description"><%= product.description %></p>
+                        </div>
+                        <div class="card__actions">
+                            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+                        </div>
+                    </div> -->
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Products Found!
+                
+            </h1>
+
+            <% } %>
+        </main>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="/js/truncate.js"></script>
+<script src="/js/swiper.js"></script>
+
+
+<%- include('../includes/end.ejs') %>
+
+
