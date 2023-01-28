@@ -8,11 +8,11 @@
         <main class="centered container">
         <div class="single-product-container">
             <img src="<%= product.imageUrl %>" alt="<%= product.title %>" class="product-img">
+            <h1><%= product.title %></h1>
             <h2>N<%= product.price %></h2>
             <p><%= product.description %></p>
             <%- include('../includes/add-to-cart.ejs') %>
             <hr>
-            <h1><%= product.title %></h1>
         </div>
         </main>
         <%- include('../includes/end.ejs') %>
